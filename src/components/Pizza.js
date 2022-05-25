@@ -1,13 +1,14 @@
 import React from "react";
 
-function Pizza() {
+function Pizza({ pizzatopping, pizzasize, pizzaveg, sendThePizzaToForm, topping, size, veg }) {
+
   return (
     <tr>
-      <td>{"Replace Me With Pizza Topping"}</td>
-      <td>{"Replace Me With Pizza Size"}</td>
-      <td>{"Replace Me With Vegatarian"}</td>
+      <td>{pizzatopping}</td>
+      <td>{pizzasize}</td>
+      <td>{pizzaveg ? "Yes" : "No"}</td>
       <td>
-        <button type="button" className="btn btn-primary">
+        <button type="button" className="btn btn-primary" onClick={sendThePizzaToForm}>
           Edit Pizza
         </button>
       </td>
